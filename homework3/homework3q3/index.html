@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Question 3!<br><br>
+		 Create an array of at least five Student objects with the following properties: name, activity, gender
+
+- Filter all those students who are into swimming
+
+- Filter all those students who are in the activity entered by the user. For example, if the user enters "Basketball" display only students with basketball as their activity
+        
+</h1>
+<div>
+	<table id="table">
+		
+		<tr>
+			<td>Buffy:</td>
+			<td>Namor:</td>
+			<td>Eddie:</td>
+			<td>Aquaman:</td>
+			<td>Santa:</td>
+		</tr>
+		<td>Female</td>
+		<td>Male</td>
+		<td>Male</td>
+		<td>Male</td>
+		<td>Male</td>
+		<tr>
+			<td>Cheerleading, Slaying, Gymnastics</td>
+			<td>Swimming, World Domination, Basket Weaving</td>
+			<td>Slaying, Rocking, Rolling</td>
+			<td>Fishing, Swimming, Tap Dancing</td>
+		    <td>Cookie Eating, Gift Giving, Slaying</td>	
+		</tr>
+	</table>
+</div>
+	
+	<div class="form">
+
+		    <label for="swimmer">Who Likes to Swim?</label>
+			<p id= "swimmer"></p>
+			<button onclick="displaySwimmers()">Submit</button>
+
+		</div>
+
+		<div class="form">
+			<label for="activity1">Choose an Activity
+			</label>
+			<p id="activity1"></p>
+			<input id="activity1" type="text"><br>
+			<button onclick="displayActivity1()">Submit</button>
+
+			</div>
+    <script>
+    //declared array//
+	const students =[
+		{name: 'Buffy', gender:'Female', activity:['Cheerleading', 'Slaying', 'Gymnastics' ]},
+		{name: 'Namor', gender:'Male', activity: ['Swimming', 'World Domination', 'Basket Weaving ']},
+		{name:'Eddie', gender: 'Male', activity:['Slaying','Rocking','Rolling'] },
+		{name: 'Aquaman', gender: 'Male', activity:['Fishing','Swimming', 'Tap Dancing']},
+		{name:'Santa', gender: 'Male', activity:['Cookie Eating', 'Gift Giving','Slaying']}
+	];
+	//this function turns objects into string//
+
+function turnObjectArrayasString(arrayOfObjects){
+	let outputString="" 
+	arrayOfObjects.map(elementObject => outputString+= elementObject.name +"<br>")
+return  outputString};
+
+//this function finds all the swimmers and displays them//
+function displaySwimmers(){
+	const swimmers=students.filter(student =>{return student.activity.includes("Swimming")});
+	console.log(turnObjectArrayasString(swimmers));
+	document.getElementById("swimmer").innerHTML=turnObjectArrayasString(swimmers);
+}
+//output//
+console.log(turnObjectArrayasString(students));
+
+//user entered activity//
+//had a hard time getting this to  work too. can we go over this in office hours?i think the multiple//
+//activities are throwing me off. Pretty Please?//
+
+function displayActivity1(){
+	const activity1=students.filter(student=> {return student.activity.includes("activity1")});
+	console.log(turnObjectArrayasString(activity1))
+	document.getElementById("activity1").innerHTML=turnObjectArrayasString(activity1);
+	return
+}
+
+
+	console.log(turnObjectArrayasString(students));
+
+
+
+
+</script>
+      
+    
+
+
+</body>
+
+</html>

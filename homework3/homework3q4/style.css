@@ -1,0 +1,45 @@
+
+*{
+    
+    text-align: center;
+    border-radius: 25px;
+    
+    
+    margin: 0;
+    display: flexbox;
+
+}
+
+#h1{
+    border: solid;
+    background-color: chartreuse;
+    padding: 05%;
+    margin: 05%;
+    box-shadow: 4px 4px ;
+    font-size: smaller;
+    text-shadow: 1px 1px rgb(220, 230, 230);
+    
+}
+#button{
+    background-color: rgb(226, 235, 241);
+    border-radius: 10px;
+     width: 100px;
+    height: 100px;
+    font-size: x-large;
+    box-shadow: 3px 3px ;
+    
+    
+}
+.form{
+    
+    border: solid;
+    margin: 05%;
+    background-color: rgb(20, 110, 184);
+    padding: 05%;
+    font-size: x-large;
+    box-shadow: 4px 4px black;
+    color: cornsilk;
+    text-shadow: 1px 1px rgb(26, 27, 27);
+}
+
+    

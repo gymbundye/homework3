@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Question 1?<br>
+        Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
+    </h1>
+	
+	<div class="form">
+		<p>Enter Your Magic Numbers</p>
+		<br>
+		
+			<label  for="Number 1!">Number 1!</label>
+			<input id="num1" type="text"><br>
+			<br>
+			<label for="Number 2!">Number 2!</label>
+			<input id="num2" type="text"><br>
+			<br>
+			<label for="Number 3!">Number 3!</label>
+			<input id="num3" type="text"><br>
+			<button onclick="maxOfThree()">Submit</button>
+
+
+		
+		</div>
+
+	
+    <script>
+    
+	function maxOfThree(num1,num2,num3){	
+	var	num1 = Number(document.getElementById("num1").value);
+	var	num2 = Number(document.getElementById("num2").value);
+	var	num3 = Number(document.getElementById("num3").value);
+
+		if(num1>num2 && num1>num3)
+		{
+			window.alert(num1+" -is greatest");
+		}
+		else if(num2>num1 && num2>num3)
+		{
+			window.alert(num2+" -is greatest");
+		}
+		else if(num3>num1 && num3>num1)
+		{
+			window.alert(num3+" is greatest");
+		}
+		
+
+	} console.log(maxOfThree(num1, num2, num3))
+</script>
+      
+    
+
+
+</body>
+
+</html>

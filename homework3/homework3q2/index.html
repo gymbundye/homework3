@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Question 2!<br><br>
+        2a. Create a function called celsiusToFahrenheit:
+
+- Take a Celsius temperature from the user and convert it to Fahrenheit
+
+- Return string as output: "SOMETHING degrees Celsius is Something degrees Fahrenheit"
+    <br>
+	<br>
+	2b. Create a function called fahrenheitToCelsius:
+
+- Now take a Fahrenheit temperature from the user and convert it to Celsius
+
+- Return string as output: "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
+</h1>
+	
+	<div class="form">
+
+		    <label for="temp1">Temp to Fahrenheit</label>
+			<input id="temp1" type="text"><br>
+			<button onclick="celsiusToFahrenheit()">Submit</button>
+
+		</div>
+
+		<div class="form">
+			<label for="temp2">Temp to Celsius</label>
+			<input id="temp2" type="text"><br>
+			<button onclick="celsiusToFahrenheit()">Submit</button>
+
+			</div>
+    <script>
+    
+	function celsiusToFahrenheit (temp1) {
+	
+		var temp1 = Number(document.getElementById("temp1").value);
+		var farenheit=(temp1*1.8)+32;
+		
+			window.alert(temp1+" degrees Celsius is" +farenheit +" degrees Farenheit!");
+		
+	}console.log(celsiusToFahrenheit(temp1))
+
+	function fahrenheitToCelsius (temp2) {
+
+	var temp2 = Number(document.getElementById("temp2").value);
+	var celsius=(temp2-32)/1.8;
+
+		window.alert(temp2+" degrees Fahrenheit is"+celsius +" degress Celsius!");
+	}console.log(fahrenheitToCelsius(temp2))
+
+</script>
+      
+    
+
+
+</body>
+
+</html>

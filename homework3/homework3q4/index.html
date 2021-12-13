@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Question 4!<br><br>
+        4. Traverse through an array (either number or string array) and display each value with their index position using Array.map method
+</h1>
+	
+	<div class="form">
+
+
+		    Ice, Glacier, Mint, The Fonz, Snow. <br><br>
+            <input type="button" id= "button" onclick="alertBox()" onclick="logArray(coolArray)"></button>
+			
+
+		</div>
+    
+
+			
+    <script>
+        //function for alert box//
+        //could not get this to alert the values//
+      function alertBox(){
+        alert(logArray(coolArray))}
+        //declared array//
+	let  coolArray= ["Ice", "Glacier","Mint", "The Fonz", "Snow"];
+    //function to index and return array values//
+	const logArray =(coolArray)=>{
+        let counter= 0;
+        let output="";
+        coolArray.map( (search) => output += `${search} is at ${ counter++} `)
+        //output//
+        console.log(output);
+        return coolArray
+    };
+    
+    
+	
+//links js to html//
+document.getElementById("button").innerHTML= logArray(coolArray) ;
+
+</script>
+      
+    
+
+
+</body>
+
+</html>
